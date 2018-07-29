@@ -1,0 +1,13 @@
+<% posts = DB[:posts] %>
+
+<div class="posts">
+    <% posts.reverse(:id).each do |post| pp post %>
+        <div class="post">
+            <h2><%= post[:title] %></h2>
+            <p><%= post[:content] %></p>
+            <small><%= post[:created] %></small>
+        </div>
+    <% end %>
+</div>
+
+<a href="<%= url("/new") %>">Add new post</a>

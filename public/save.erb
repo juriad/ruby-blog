@@ -1,0 +1,15 @@
+<%
+    if env['REQUEST_METHOD'] != 'POST'
+        halt(405, "Only POST allowed")
+    end
+
+    posts = DB[:posts]
+
+    id = posts.insert({
+        title: params['title'],
+        content: params['content'],
+        created: DateTime.now
+    })
+
+    redirect("/", 303)
+%>
