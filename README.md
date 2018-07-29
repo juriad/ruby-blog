@@ -1,4 +1,4 @@
-=Simple Blog Engine
+# Simple Blog Engine
 
 A simple blog engine implemented in Ruby without need of any knowledge of OOP and MVC.
 
